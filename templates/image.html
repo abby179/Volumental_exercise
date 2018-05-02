@@ -1,0 +1,12 @@
+{% extends 'upload.html' %}
+
+{% block image %}
+    <br>
+    <img src="{{ file_url }}" alt="">
+    <div class = "container" style="margin-left: 10px; margin-bottom: 20px">
+        {% for color in colors %}
+        <div class="border border-dark rounded-circle coloured_circle" style="background-color: rgba({{ color["R"] }}, {{ color["G"] }}, {{ color["B"] }}, {{ color["A"] }})"></div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
