@@ -21,7 +21,7 @@ def allowed_file(filename):
 def get_access_token():
     url = 'https://volumental.eu.auth0.com/oauth/token'
     data = json.dumps({"client_id": "yAdjPKiLQyK2ujTj6XcTC7lQy1GYq0Po",
-                       "client_secret": "h-wu0HuXbIOToBUbEnzBdvsH-9YkjY3eov10gbAgwG6HZ0-ksH7h9DrVa17b8QB2",
+                       "client_secret": "secret",
                        "audience": "http://homeexercise.volumental.com/", "grant_type": "client_credentials"})
     r = requests.post(url, headers={'Content-Type': 'application/json'}, data=data)
     return r.json()['access_token']
